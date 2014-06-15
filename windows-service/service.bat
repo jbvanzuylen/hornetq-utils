@@ -35,11 +35,15 @@ set SERVICE_DESCRIPTION=HornetQ Messaging System
 set SERVICE_LOGPATH=%HORNETQ_HOME%\logs
 
 rem 
+if "x%1x" == "xx" goto showUsage
 set SERVICE_CMD=%1
 if /i %SERVICE_CMD% == install goto doInstall
 if /i %SERVICE_CMD% == remove goto doRemove
 if /i %SERVICE_CMD% == uninstall goto doRemove
 echo Unknown parameter "%1"
+
+:showUsage
+echo Usage: service.bat install/uninstall
 goto end
 
 :doInstall
