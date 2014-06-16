@@ -1,4 +1,5 @@
-hornetq-utils
-=============
+Utilities for HornetQ
+=====================
 
-HornetQ utilities (Windows service, ...)
+* Install HornetQ as a service under Windows
+* Startup/shutdown script for Linux (Coming soon...)
